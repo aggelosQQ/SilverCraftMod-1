@@ -17,7 +17,7 @@ import org.bukkit.util.Vector;
 
 @CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH)
 @CommandParameters(description = "For the stupid bishs", usage = "/<command> <playername>")
-public class Command_greatraider extends TFM_Command
+public class Command_nope extends TFM_Command
 {
     @Override
     public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
@@ -112,43 +112,7 @@ public class Command_greatraider extends TFM_Command
                 player.setHealth(0.0);
             }
         }.runTaskLater(plugin, 3L * 20L);
-        
-        new BukkitRunnable()
-        {
-            @Override
-            public void run()
-           
-        }.runTaskLater(plugin, 3L * 20L);
-        
-        new BukkitRunnable()
-        {
-            @Override
-            public void run()
-            
-                player.getWorld().createExplosion(player.getLocation(), 8F);
-                
-            }
-        }.runTaskLater(plugin, 3L * 20L);
-        
-        new BukkitRunnable()
-        {
-            @Override
-            public void run()
-            {
-                if (sender.getName().equalsIgnoreCase("GreatRaider")
-                {
-                    // More spam for me
-                                   }
-                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                }
-                
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.getWorld().createExplosion(player.getLocation(), 8F);
-               
-            }
-        }.runTaskLater(plugin, 3L * 20L);
-        
-        
+
         new BukkitRunnable()
         {
             @Override
