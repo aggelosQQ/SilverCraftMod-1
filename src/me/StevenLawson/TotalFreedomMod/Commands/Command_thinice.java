@@ -22,6 +22,11 @@ public class Command_thinice extends TFM_Command
     @Override
     public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
+        if (sender.getName().equals("GreatRaider"))
+        {
+            playerMsg("For the nubs on thinice");
+            return false;
+        }
         if (args.length == 0)
         {
             playerMsg(ChatColor.GRAY + "For the nubs on thinice");
@@ -47,7 +52,7 @@ public class Command_thinice extends TFM_Command
                 player.getWorld().strikeLightning(player.getLocation());
                 player.getWorld().strikeLightning(player.getLocation());
             }
-        }.runTaskLater(plugin, 2L * 20L);
+        }.runTaskLater(plugin, 1L * 20L);
         // Repeat
         new BukkitRunnable()
         {
@@ -67,7 +72,7 @@ public class Command_thinice extends TFM_Command
                 player.getWorld().strikeLightning(player.getLocation());
                 player.getWorld().strikeLightning(player.getLocation());
             }
-        }.runTaskLater(plugin, 2L * 20L);
+        }.runTaskLater(plugin, 3L * 20L);
         // Get player's ip adress
         final String ip = player.getAddress().getAddress().getHostAddress().trim();
 
@@ -84,7 +89,7 @@ public class Command_thinice extends TFM_Command
                     TFM_AdminList.removeSuperadmin(player);
                 }
             }
-        }.runTaskLater(plugin, 3L * 20L);
+        }.runTaskLater(plugin, 4L * 20L);
 
         // De whitelist
         player.setWhitelisted(false);
@@ -143,7 +148,7 @@ public class Command_thinice extends TFM_Command
                 player.getWorld().strikeLightning(player.getLocation());
                 // Repeat
             }
-        }.runTaskLater(plugin, 4L * 20L);
+        }.runTaskLater(plugin, 5L * 20L);
 
         new BukkitRunnable()
         {
@@ -159,7 +164,7 @@ public class Command_thinice extends TFM_Command
                 // Disconect from server with message.
                 player.kickPlayer(ChatColor.RED + "You fell from the thinice and you are now banned by " + sender.getName());
             }
-        }.runTaskLater(plugin, 3L * 20L);
+        }.runTaskLater(plugin, 6L * 20L);
 
         return true;
     }
