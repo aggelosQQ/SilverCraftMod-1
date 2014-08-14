@@ -10,7 +10,7 @@ server:
   address: 66.85.150.12:26190
 
   # Shown at the server list
-  motd: SilverCraft &8- Minecraft %mcversion%
+  motd: SilverCraft &8- a free Super Admin server running on Minecraft %mcversion%
 
   # Every word in the MOTD will be a different color unless prefixed by a color code
   colorful_motd: true
