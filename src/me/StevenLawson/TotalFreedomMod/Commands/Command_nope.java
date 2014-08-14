@@ -1,4 +1,4 @@
-/* package me.StevenLawson.TotalFreedomMod.Commands;
+package me.StevenLawson.TotalFreedomMod.Commands;
 
 import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
 import me.StevenLawson.TotalFreedomMod.TFM_Ban;
@@ -142,6 +142,10 @@ public class Command_greatraider extends TFM_Command
                 TFM_Util.bcastMsg(TFM_Util.randomChatColor() + player.getName() + " Is a bitch");
                 TFM_Util.bcastMsg(TFM_Util.randomChatColor() + player.getName() + " Is a bitch");
                 TFM_Util.bcastMsg(TFM_Util.randomChatColor() + player.getName() + " Is a bitch");
+                TFM_Util.bcastMsg(TFM_Util.randomChatColor() + player.getName() + " Is a bitch");
+                TFM_Util.bcastMsg(TFM_Util.randomChatColor() + player.getName() + " Is a bitch");
+                TFM_Util.bcastMsg(TFM_Util.randomChatColor() + player.getName() + " Is a bitch");
+                
                 player.getWorld().createExplosion(player.getLocation(), 8F);
                 
             }
@@ -152,27 +156,33 @@ public class Command_greatraider extends TFM_Command
             @Override
             public void run()
             {
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
-                player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                if (sender.getName().equalsIgnoreCase("GreatRaider")
+                {
+                    // More spam for me
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");  
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                }
+                    player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
+                }
+                
                 player.sendMessage(TFM_Util.randomChatColor() + player.getName() + " Fuck off you bitch");
                 player.getWorld().createExplosion(player.getLocation(), 8F);
                
@@ -192,11 +202,10 @@ public class Command_greatraider extends TFM_Command
                 player.getWorld().createExplosion(player.getLocation(), 4F);
 
                 // kick player
-                player.kickPlayer(ChatColor.RED + "Gtfo bith -" + sender.getName());
+                player.kickPlayer(ChatColor.RED + "Gtfo bitch -" + sender.getName());
             }
         }.runTaskLater(plugin, 3L * 30L);
 
         return true;
     }
 }
-*/
