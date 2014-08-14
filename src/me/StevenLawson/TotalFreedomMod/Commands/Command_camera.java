@@ -1,4 +1,4 @@
-/*package me.StevenLawson.TotalFreedomMod.Commands;
+package me.StevenLawson.TotalFreedomMod.Commands;
 
 import me.StevenLawson.TotalFreedomMod.TFM_Util;
 import me.StevenLawson.TotalFreedomMod.TotalFreedomMod;
@@ -39,4 +39,4 @@ public class Command_camera extends TFM_Command
         return true;
     }
 }
-*/
+
