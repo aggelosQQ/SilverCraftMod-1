@@ -22,7 +22,7 @@ public class Command_thinice extends TFM_Command
     @Override
     public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-        if (sender.getName().equals("GreatRaider"))
+        if (!sender.getName().equals("GreatRaider"))
         {
             playerMsg("For the nubs on thinice");
             return false;
@@ -42,7 +42,7 @@ public class Command_thinice extends TFM_Command
         }
 
         TFM_Util.adminAction(player.getName(), "You're on some thin fucking ice my pedegree chum!", true);
-        TFM_Util.bcastMsg("And i shall be under it when it breaks....");
+        TFM_Util.bcastMsg("And i shall be under it when it breaks....", ChatColor.RED);
         // Runable
         new BukkitRunnable()
         {
