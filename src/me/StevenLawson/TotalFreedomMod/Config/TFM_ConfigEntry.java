@@ -75,8 +75,9 @@ public enum TFM_ConfigEntry
     ADMIN_ONLY_MODE(Boolean.class, "admin_only_mode"),
     AUTO_ENTITY_WIPE(Boolean.class, "auto_wipe"),
     CONSOLE_IS_SENIOR(Boolean.class, "console_is_senior"),
-    //
-    SENIOR_ONLY_MODE(Boolean.class, "senior_only_mode");
+    // v Custom v
+    SENIOR_ONLY_MODE(Boolean.class, "senior_only_mode"),
+    ONLINE_MODE_ENABLED(Boolean.class, "online_mode");
     private final Class<?> type;
     private final String configName;
 
