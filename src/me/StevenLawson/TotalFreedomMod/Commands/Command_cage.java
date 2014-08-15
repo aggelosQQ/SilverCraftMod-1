@@ -11,16 +11,13 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-@CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
+@CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH)
 @CommandParameters(description = "Place a cage around someone.", usage = "/<command> <purge | off | <partialname> [outermaterial] [innermaterial]>")
 public class Command_cage extends TFM_Command
 {
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
-    {
-        if (TFM_AdminList.isSeniorAdmin(sender_p))
-        {
-                  
+    {       
         if (args.length == 0)
         {
             return false;
@@ -121,15 +118,6 @@ public class Command_cage extends TFM_Command
             TFM_Util.adminAction(sender.getName(), "Caging " + player.getName() + " in PURE_PIEGUY", true);
         }
 
-        return true;
-        }
-        else
-        {
-        TFM_PlayerData playerdata = TFM_PlayerData.getPlayerData(sender_p);
-
-        Material outerMaterial = Material.GLASS;
-        Material innerMaterial = Material.AIR;
-        }
         return true;
     }
 }
