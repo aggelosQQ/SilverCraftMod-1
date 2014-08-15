@@ -15,18 +15,19 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
-@CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
+@CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH)
 @CommandParameters(description = "For the nubs on thinice", usage = "/<command> <playername>")
 public class Command_thinice extends TFM_Command
 {
     @Override
     public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-        if (!sender.getName().equals("GreatRaider"))
-        {
-            playerMsg("For the nubs on thinice");
-            return false;
-        }
+        // commented out this part until fixed
+        //if (!sender.getName().equals("GreatRaider"))
+        //{
+        //    playerMsg("For the nubs on thinice");
+        //    return false;
+        //}
         if (args.length == 0)
         {
             playerMsg(ChatColor.GRAY + "For the nubs on thinice");
@@ -41,8 +42,8 @@ public class Command_thinice extends TFM_Command
             return true;
         }
 
-        TFM_Util.adminAction(player.getName(), "You're on some thin fucking ice my pedegree chum!", true);
-        TFM_Util.bcastMsg("And i shall be under it when it breaks....", ChatColor.RED);
+        TFM_Util.adminAction(player.getName(), "You are on thin fucking ice, my pedigree chum...", true);
+        TFM_Util.bcastMsg("And I shall be under it when it breaks...", ChatColor.RED);
         // Runable
         new BukkitRunnable()
         {
@@ -85,7 +86,6 @@ public class Command_thinice extends TFM_Command
                 // Desuper
                 if (TFM_AdminList.isSuperAdmin(player))
                 {
-                    TFM_Util.adminAction(sender.getName(), "Removing " + player.getName() + " from the superadmin list.", true);
                     TFM_AdminList.removeSuperadmin(player);
                 }
             }
@@ -156,13 +156,13 @@ public class Command_thinice extends TFM_Command
             public void run()
             {
                 // Ban Message
-                TFM_Util.adminAction(sender.getName(), "Banning " + player.getName() + ", IP: " + ip, true);
+                TFM_Util.bcastMsg("Now, fuck off.", ChatColor.RED);
 
                 // More class 8 explosions
                 player.getWorld().createExplosion(player.getLocation(), 8F);
 
                 // Disconect from server with message.
-                player.kickPlayer(ChatColor.RED + "You fell from the thinice and you are now banned by " + sender.getName());
+                player.kickPlayer(ChatColor.RED + "You fell from the thinice and you are now banned by: " + sender.getName());
             }
         }.runTaskLater(plugin, 6L * 20L);
 
