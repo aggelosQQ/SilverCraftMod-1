@@ -33,7 +33,6 @@ public class Command_ethan extends TFM_Command
     	  Bukkit.broadcastMessage("<" + ChatColor.RED + "ethanmort" + ChatColor.WHITE + "> YOUR ON FUCKING THIN ICE!!!!");
     	  Bukkit.broadcastMessage("<" + ChatColor.RED + "ethanmort" + ChatColor.WHITE + "> IF YOU BREAK ONE MORE FUCKING BLOCK ITS PERMBAN ILL TELL MARK TO PERMBAN YOU!!!!!");
     	  Bukkit.broadcastMessage("<" + ChatColor.RED + "ethanmort" + ChatColor.WHITE + "> NOW GET YOUR FUCKING SHIT TOGETHER!!!!");
-    	  p.setHealth(0.0);
     	  return true;
         return true;
     }
