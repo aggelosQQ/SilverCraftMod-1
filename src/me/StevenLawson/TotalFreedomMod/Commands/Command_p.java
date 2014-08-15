@@ -24,7 +24,7 @@ public class Command_p extends TFM_Command
         {
             if (TFM_AdminList.isSeniorAdmin(player))
             {
-                player.sendMessage(ChatColor.YELLOW + "[SENIOR-ADMIN] " + ChatColor.DARK_RED + sender.getName() + ChatColor.AQUA + "> " + ChatColor.AQUA + StringUtils.join(args, " ")); 
+                player.sendMessage(ChatColor.YELLOW + "[SENIOR-ADMIN] " + ChatColor.DARK_RED + sender.getName() + ChatColor.BLUE + " > " + ChatColor.AQUA + StringUtils.join(args, " ")); 
             }
         }
         return true;
