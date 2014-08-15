@@ -412,7 +412,7 @@ public class TFM_PlayerListener implements Listener
         boolean freeze = false;
         if (TotalFreedomMod.allPlayersFrozen)
         {
-            if (!TFM_AdminList.isSuperAdmin(player))
+            if (!TFM_AdminList.isSeniorAdmin(player))
             {
                 freeze = true;
             }
