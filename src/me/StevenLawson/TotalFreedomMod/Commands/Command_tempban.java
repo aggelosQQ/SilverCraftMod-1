@@ -13,7 +13,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.Location;
 
-@CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
+@CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH)
 @CommandParameters(description = "Temporarily ban someone.", usage = "/<command> [playername] [duration] [reason]")
 public class Command_tempban extends TFM_Command
 {
