@@ -41,7 +41,7 @@ public class Command_silverban extends TFM_Command
             reason = StringUtils.join(ArrayUtils.subarray(args, 1, args.length), " ");
         }
 
-        TFM_Util.bcastMsg("SilverBot:" + player.getName() + "has been banned for <there you go great, complete it>" ChatColor.RED);
+        TFM_Util.bcastMsg("SilverBot: " + player.getName() + " has been banned for <there you go great, complete it>" ChatColor.RED);
 
         // Undo WorldEdits:
         try
