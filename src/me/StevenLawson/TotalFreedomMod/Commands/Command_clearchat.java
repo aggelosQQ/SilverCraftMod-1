@@ -13,7 +13,7 @@ public class Command_clearchat
 {
   public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
   {
-    for (int i = 0; i <= 85; i++) {
+    for (int i = 0; i <= 95; i++) {
       TFM_Util.bcastMsg("");
     }
     TFM_Util.bcastMsg(ChatColor.GREEN + "Chat has been Cleared By - " + sender.getName());
