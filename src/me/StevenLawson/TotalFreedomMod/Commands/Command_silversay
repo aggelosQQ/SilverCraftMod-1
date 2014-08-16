@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 @CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
 @CommandParameters(description = "SilverBot's broadcast command.", usage = "/<command> <message>")
-public class Command_say extends TFM_Command
+public class Command_silversay extends TFM_Command
 {
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
