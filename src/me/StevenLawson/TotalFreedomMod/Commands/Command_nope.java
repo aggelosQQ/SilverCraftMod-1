@@ -16,7 +16,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 @CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH)
-@CommandParameters(description = "Nope a player", usage = "/<command> [playername]")
+@CommandParameters(description = "Nope a player", usage = "/<command> <playername>")
 public class Command_nope extends TFM_Command
 {
     @Override
