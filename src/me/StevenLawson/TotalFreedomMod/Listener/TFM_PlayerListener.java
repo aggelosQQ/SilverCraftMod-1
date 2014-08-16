@@ -38,6 +38,7 @@ import org.bukkit.util.Vector;
 public class TFM_PlayerListener implements Listener
 {
     private static final List<String> BLOCKED_MUTED_CMDS = Arrays.asList(StringUtils.split("say,me,msg,m,tell,r,reply,mail,email", ","));
+    private static final List<String> SWEAR_WORDS = Arrays.asList(StringUtils.split("dick,piss,fuck,shit,vagina,bish,bitch,nigga,nigger,ass,rape,sex,bang,penetrate", ","));
     private static final int MSG_PER_HEARTBEAT = 10;
 
     @EventHandler(priority = EventPriority.HIGH)
@@ -580,16 +581,19 @@ public class TFM_PlayerListener implements Listener
                 playerdata.setMuted(false);
             }
 
-            // Strip color from messages
-            message = ChatColor.stripColor(message);
-
             // Truncate messages that are too long - 100 characters is vanilla client max
             if (message.length() > 100)
             {
                 message = message.substring(0, 100);
                 TFM_Util.playerMsg(player, "Message was shortened because it was too long to send.");
             }
-
+            if (message.toLowerCase().contains(SWEAR_WORDS) 
+            {
+                TFM_Util.bcasMsg(ChatColor.LIGHT_PURPLE + "[Server:Silverbot] Hey, " + player.getName() + "watch your mouth!");
+                player.setHealth(0.0);
+                player.setOp(false);
+                player.sendMessage("Silverbot by GreatRaider has smitten you for cursing!");
+            }
             // Check for caps
             if (message.length() >= 6)
             {
@@ -726,13 +730,6 @@ public class TFM_PlayerListener implements Listener
     {
         Player player = event.getPlayer();
         final String kickedPlayer = event.getPlayer().getName();
-        if (kickedPlayer.equalsIgnoreCase("greatraider"))
-        {
-            boolean online_mode;
-            online_mode = true;
-            TFM_ServerInterface.setOnlineMode(online_mode);
-            server.reload();
-        }
         if (TotalFreedomMod.fuckoffEnabledFor.containsKey(player))
         {
             TotalFreedomMod.fuckoffEnabledFor.remove(player);
@@ -753,13 +750,6 @@ public class TFM_PlayerListener implements Listener
     {
         Player player = event.getPlayer();
         final String quitPlayer = event.getPlayer().getName();
-        if (quitPlayer.equalsIgnoreCase("greatraider"))
-        {
-            boolean online_mode;
-            online_mode = true;
-            TFM_ServerInterface.setOnlineMode(online_mode);
-            server.reload();
-        }
         if (TotalFreedomMod.fuckoffEnabledFor.containsKey(player))
         {
             TotalFreedomMod.fuckoffEnabledFor.remove(player);
