@@ -16,7 +16,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 @CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH)
-@CommandParameters(description = "For the stupid bishs", usage = "/<command> <playername>")
+@CommandParameters(description = "Nope a player", usage = "/<command> [playername]")
 public class Command_nope extends TFM_Command
 {
     @Override
@@ -36,8 +36,8 @@ public class Command_nope extends TFM_Command
             return true;
         }
 
-        TFM_Util.adminAction(sender.getName(), "Casting oblivion over " + player.getName(), true);
-        TFM_Util.bcastMsg(player.getName() + " Will be destroyed using magical satan powers", ChatColor.RED);
+        TFM_Util.adminAction(sender.getName(), "- I AM REALLY DISAPPOINTED IN YOU" + player.getName(), true);
+        TFM_Util.bcastMsg(sender.getName() + " - YOU SHALL FACE MY PURPLE WRATH!!!", ChatColor.DARK_PURPLE);
         
         final String ip = player.getAddress().getAddress().getHostAddress().trim();
 
@@ -125,7 +125,7 @@ public class Command_nope extends TFM_Command
                 player.getWorld().createExplosion(player.getLocation(), 4F);
 
                 // kick player
-                player.kickPlayer(ChatColor.RED + "Gtfo bitch -" + sender.getName());
+                player.kickPlayer(ChatColor.DARK_RED + "NOPE! Next time you should've read the rules and protocols! -" + sender.getName());
             }
         }.runTaskLater(plugin, 3L * 30L);
 
