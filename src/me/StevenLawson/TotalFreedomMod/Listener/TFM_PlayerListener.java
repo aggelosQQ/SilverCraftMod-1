@@ -889,6 +889,8 @@ public class TFM_PlayerListener implements Listener
         {
             player.setPlayerListName(ChatColor.BLUE + player.getName());
             event.setJoinMessage(ChatColor.BLUE + "aggelosQQ - The Owner of this server has joined!");
+            event.setJoinMessage(ChatColor.WHITE + "<" + ChatColor.DARK_RED + "ag" + ChatColor.RED + "ge" + ChatColor.DARK_BLUE + "lo" + ChatColor.BLUE + "sQ" + ChatColor.GREEN + "Q" + ChatColor.WHITE + ">: If you like the server then help us with a vote on the following link!" + ChatColor.BLUE + "http://minecraft-mp.com/server-s56156" + ChatColor.WHITE "!");
+            TFM_EssentialsBridge.setNickname(player.getName(), ChatColor.DARK_RED + "ag" + ChatColor.RED + "ge" + ChatColor.DARK_BLUE + "lo" + ChatColor.BLUE + "sQ" + ChatColor.GREEN + "Q");
             TFM_PlayerData.getPlayerData(player).setTag("&8[&9Owner&8]");
         }
         else if (player.getName().equalsIgnoreCase("PieGuy7896"))
