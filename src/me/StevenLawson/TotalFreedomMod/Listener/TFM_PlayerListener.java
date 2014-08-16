@@ -103,7 +103,8 @@ public class TFM_PlayerListener implements Listener
                 {
                     case STICK:
                     {
-                        if (!TFM_AdminList.isSuperAdmin(player))
+                        // This will pervent spam from Super Administrators that don't have /rb
+                        if (!TFM_AdminList.isSeniorAdmin(player))
                         {
                             break;
                         }
