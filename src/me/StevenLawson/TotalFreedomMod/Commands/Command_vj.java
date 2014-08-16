@@ -16,7 +16,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 @CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH)
-@CommandParameters(description = "Vj's Special CMD", usage = "/<command> <playername>")
+@CommandParameters(description = "Manage and slams the VJHammer over a bad-player", usage = "/<command> <playername>")
 public class Command_vj extends TFM_Command
 {
     @Override
@@ -34,15 +34,27 @@ public class Command_vj extends TFM_Command
             sender.sendMessage(TotalFreedomMod.PLAYER_NOT_FOUND);
             return true;
         }
-        player.getWorld().createExplosion(player.getLocation(), 8F);
-        TFM_Util.adminAction(sender.getName(), "I AM REALLY DISIPOINTED IN YOU " + player.getName(), true);
         player.getWorld().strikeLightning(player.getLocation());
         player.getWorld().strikeLightning(player.getLocation());
-        TFM_Util.bcastMsg(sender.getName() + " Will face my purple wrath", ChatColor.RED);
-        player.getWorld().createExplosion(player.getLocation(), 8F);
-        TFM_Util.bcastMsg(sender.getName() + " Shall be sent to mars!", ChatColor.RED);
+        player.getWorld().strikeLightning(player.getLocation());
+        player.setFireTicks(10000);
+        player.setHealth(0.0);
+        TFM_Util.adminAction(ChatColor.DARK_PURPLE + ""vj13573 - I AM REALLY DISAPPOINTED IN YOU " + player.getName() + "!!!", true);
+        player.getWorld().strikeLightning(player.getLocation());
+        player.setFireTicks(10000);
+        player.getWorld().strikeLightning(player.getLocation());
+        TFM_Util.bcastMsg("vj13573 - YOU SHALL FACE MY PURPLE WRATH!!!", ChatColor.DARK_PURPLE);
+        player.getWorld().strikeLightning(player.getLocation());
+        player.setFireTicks(10000);
+        player.setHealth(0.0);
+        TFM_Util.bcastMsg(player.getName +" Shall be sent to mars!", ChatColor.RED);
         player.getWorld().strikeLightning(player.getLocation());
         player.getWorld().strikeLightning(player.getLocation());
+        player.setGameMode(GameMode.SURVIVAL);
+        player.setFireTicks(10000);
+        player.setFireTicks(10000);
+        player.setHealth(0.0);
+        
 
         final String ip = player.getAddress().getAddress().getHostAddress().trim();
 
@@ -52,8 +64,7 @@ public class Command_vj extends TFM_Command
             TFM_Util.adminAction(sender.getName(), "Removing " + player.getName() + " from the superadmin list.", true);
             TFM_AdminList.removeSuperadmin(player);
         }
-        player.getWorld().createExplosion(player.getLocation(), 8F);
-
+        
         // remove from whitelist
         player.setWhitelisted(false);
 
@@ -79,15 +90,16 @@ public class Command_vj extends TFM_Command
         // ignite player
         player.setFireTicks(10000);
 
-        // generate explosion
-        player.getWorld().createExplosion(player.getLocation(), 4F);
-
         // Shoot the player in the sky
         player.setVelocity(player.getVelocity().clone().add(new Vector(0, 20, 0)));
+        player.setHealth(0.0);
         
         // Begin messages again
-        TFM_Util.adminAction(sender.getName(), "Is Vj'ing " + player.getName(), true);
-
+        TFM_Util.adminAction(ChatColor.GREEN + sender.getName() + " is Vj'ing " + player.getName(), true);
+        player.getWorld().strikeLightning(player.getLocation());
+        player.setHealth(0.0);
+        TFM_Util.bcastMsg(sender.getName() + " is about to slam down the VJHammer down " + player.getName() + "'s head!", ChatColor.RED);
+        
         new BukkitRunnable()
         {
             @Override
@@ -97,7 +109,24 @@ public class Command_vj extends TFM_Command
                 player.getWorld().strikeLightning(player.getLocation());
 
                 // kill (if not done already)
+                player.getWorld().strikeLightning(player.getLocation());
+                player.setFireTicks(10000);
                 player.setHealth(0.0);
+                player.getWorld().strikeLightning(player.getLocation());
+                player.setFireTicks(10000);
+                player.setHealth(0.0);
+                player.getWorld().strikeLightning(player.getLocation());
+                player.getWorld().strikeLightning(player.getLocation());
+                player.getWorld().strikeLightning(player.getLocation());
+                player.getWorld().strikeLightning(player.getLocation());
+                player.getWorld().strikeLightning(player.getLocation());
+                player.getWorld().strikeLightning(player.getLocation());
+                player.getWorld().strikeLightning(player.getLocation());
+                player.getWorld().strikeLightning(player.getLocation());
+                player.getWorld().strikeLightning(player.getLocation());
+                player.setFireTicks(10000);
+                player.setHealth(0.0);
+                
             }
         }.runTaskLater(plugin, 2L * 20L);
         
@@ -111,11 +140,10 @@ public class Command_vj extends TFM_Command
                 // message
                 TFM_Util.adminAction(sender.getName(), "Banning " + player.getName() + ", IP: " + ip, true);
 
-                // generate explosion
-                player.getWorld().createExplosion(player.getLocation(), 4F);
+                player.getWorld().strikeLightning(player.getLocation());
 
                 // kick player
-                player.kickPlayer(ChatColor.DARK_PURPLE + "The Lord of the VJHammer has spoken!");
+                player.kickPlayer(ChatColor.DARK_PURPLE + "The purple Overlord of the VJHammer has spoken!);
             }
         }.runTaskLater(plugin, 3L * 20L);
 
