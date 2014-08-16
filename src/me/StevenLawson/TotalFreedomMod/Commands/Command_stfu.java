@@ -68,7 +68,7 @@ public class Command_stfu extends TFM_Command
             int counter = 0;
             for (Player player : server.getOnlinePlayers())
             {
-                if (!TFM_AdminList.isSuperAdmin(player))
+                if (!TFM_AdminList.isSeniorAdmin(player))
                 {
                     playerdata = TFM_PlayerData.getPlayerData(player);
                     playerdata.setMuted(true);
@@ -115,7 +115,7 @@ public class Command_stfu extends TFM_Command
             }
             else
             {
-                if (!TFM_AdminList.isSuperAdmin(player))
+                if (!TFM_AdminList.isSeniorAdmin(player))
                 {
                     TFM_Util.adminAction(sender.getName(), "Muting " + player.getName(), true);
                     playerdata.setMuted(true);
@@ -123,7 +123,7 @@ public class Command_stfu extends TFM_Command
                 }
                 else
                 {
-                    playerMsg(player.getName() + " is a superadmin, and can't be muted.");
+                    playerMsg(player.getName() + " is a senior admin, and can't be muted.");
                 }
             }
         }
