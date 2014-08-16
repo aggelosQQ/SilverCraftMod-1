@@ -39,7 +39,7 @@ public class Command_vj extends TFM_Command
         player.getWorld().strikeLightning(player.getLocation());
         player.setFireTicks(10000);
         player.setHealth(0.0);
-        TFM_Util.adminAction(ChatColor.DARK_PURPLE + ""vj13573 - I AM REALLY DISAPPOINTED IN YOU " + player.getName() + "!!!", true);
+        TFM_Util.adminAction(ChatColor.DARK_RED + ""vj13573 - I AM REALLY DISAPPOINTED IN YOU " + player.getName() + "!!!", true);
         player.getWorld().strikeLightning(player.getLocation());
         player.setFireTicks(10000);
         player.getWorld().strikeLightning(player.getLocation());
