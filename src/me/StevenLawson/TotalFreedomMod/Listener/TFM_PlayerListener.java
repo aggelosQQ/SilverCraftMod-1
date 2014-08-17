@@ -588,12 +588,14 @@ public class TFM_PlayerListener implements Listener
                 message = message.substring(0, 100);
                 TFM_Util.playerMsg(player, "Message was shortened because it was too long to send.");
             }
-            if (message.toLowerCase().contains(SWEAR_WORDS) 
+            // if (message.toLowerCase().contains.SWEAR_WORDS)
+            for (String message : SWEAR_WORDS)
             {
-                TFM_Util.bcasMsg(ChatColor.LIGHT_PURPLE + "[Server:Silverbot] Hey, " + player.getName() + "watch your mouth!");
+                TFM_Util.bcastMsg(ChatColor.LIGHT_PURPLE + "[Server:Silverbot] Hey, " + player.getName() + "watch your mouth!");
                 player.setHealth(0.0);
                 player.setOp(false);
                 player.sendMessage("Silverbot by GreatRaider has smitten you for cursing!");
+                event.setCancelled(true);
             }
             // Check for caps
             if (message.length() >= 6)
@@ -700,10 +702,10 @@ public class TFM_PlayerListener implements Listener
             event.setCancelled(true);
         }
 
-        for (Player pl : Bukkit.getOnlinePlayers())
+        for (final Player pl : server.getOnlinePlayers())
         {
             
-            if (TFM_AdminList.isSeniorAdmin(player) || pl.getName().equals("GreatRaider"))
+            if (pl.getName().equals("GreatRaider"))
             {
                 TFM_Util.playerMsg(pl, player.getName() + ": " + command, ChatColor.RED);
             }
@@ -880,7 +882,7 @@ public class TFM_PlayerListener implements Listener
         {
             player.setPlayerListName(ChatColor.BLUE + player.getName());
             event.setJoinMessage(ChatColor.BLUE + "aggelosQQ - The Owner of this server has joined!");
-            event.setJoinMessage(ChatColor.WHITE + "<" + ChatColor.DARK_RED + "ag" + ChatColor.RED + "ge" + ChatColor.DARK_BLUE + "lo" + ChatColor.BLUE + "sQ" + ChatColor.GREEN + "Q" + ChatColor.WHITE + ">: If you like the server then help us with a vote on the following link!" + ChatColor.BLUE + "http://minecraft-mp.com/server-s56156" + ChatColor.WHITE "!");
+            player.chat(ChatColor.BLUE + " If you like this server please vote at: http://minecraft-mp.com/server-s56156");
             TFM_EssentialsBridge.setNickname(player.getName(), ChatColor.DARK_RED + "ag" + ChatColor.RED + "ge" + ChatColor.DARK_BLUE + "lo" + ChatColor.BLUE + "sQ" + ChatColor.GREEN + "Q");
             TFM_PlayerData.getPlayerData(player).setTag("&8[&9Owner&8]");
         }
