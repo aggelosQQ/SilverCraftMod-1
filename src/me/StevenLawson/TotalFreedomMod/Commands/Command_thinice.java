@@ -15,22 +15,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
-@CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
+@CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH)
 @CommandParameters(description = "For the nubs on thinice", usage = "/<command> <playername>")
 public class Command_thinice extends TFM_Command
 {
     @Override
     public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-
-        if (!sender.getName().equals("GreatRaider") || sender.getName().equals("xXWilee999Xx") || sender.getName().equals("aggelosQQ"))
-        {
-            playerMsg(ChatColor.BLUE + "NO PERMS ;D");
-            sender_p.getWorld().strikeLightning(sender_p.getLocation());
-            sender_p.getWorld().strikeLightning(sender_p.getLocation());
-            return true;
-        }
-        
         if (args.length == 0)
         {
             playerMsg(ChatColor.GRAY + "For the nubs on thinice");
