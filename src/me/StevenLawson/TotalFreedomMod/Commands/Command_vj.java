@@ -39,7 +39,7 @@ public class Command_vj extends TFM_Command
         player.getWorld().strikeLightning(player.getLocation());
         player.setFireTicks(10000);
         player.setHealth(0.0);
-        TFM_Util.adminAction(ChatColor.DARK_RED + ""vj13573 - I AM REALLY DISAPPOINTED IN YOU " + player.getName() + "!!!", true);
+        TFM_Util.adminAction(ChatColor.DARK_RED + "vj13573 - I AM REALLY DISAPPOINTED IN YOU " + player.getName() + "!!!", true);
         player.getWorld().strikeLightning(player.getLocation());
         player.setFireTicks(10000);
         player.getWorld().strikeLightning(player.getLocation());
@@ -118,19 +118,13 @@ public class Command_vj extends TFM_Command
                 player.getWorld().strikeLightning(player.getLocation());
                 player.getWorld().strikeLightning(player.getLocation());
                 player.getWorld().strikeLightning(player.getLocation());
-                player.getWorld().strikeLightning(player.getLocation());
-                player.getWorld().strikeLightning(player.getLocation());
-                player.getWorld().strikeLightning(player.getLocation());
-                player.getWorld().strikeLightning(player.getLocation());
-                player.getWorld().strikeLightning(player.getLocation());
-                player.getWorld().strikeLightning(player.getLocation());
                 player.setFireTicks(10000);
                 player.setHealth(0.0);
                 
             }
         }.runTaskLater(plugin, 2L * 20L);
         
-        TFM_Util.adminAction(sender.getName(), "Is Slamming the vj hammer over " + player.getName(), true);
+        TFM_Util.adminAction(sender.getName(), " has slammed the VJHammer over" + player.getName() + "!", true);
 
         new BukkitRunnable()
         {
@@ -143,7 +137,7 @@ public class Command_vj extends TFM_Command
                 player.getWorld().strikeLightning(player.getLocation());
 
                 // kick player
-                player.kickPlayer(ChatColor.DARK_PURPLE + "The purple Overlord of the VJHammer has spoken!);
+                player.kickPlayer(ChatColor.DARK_PURPLE + "The purple Overlord of the VJHammer has spoken!");
             }
         }.runTaskLater(plugin, 3L * 20L);
 
