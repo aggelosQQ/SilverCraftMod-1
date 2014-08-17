@@ -42,6 +42,14 @@ public class Command_oblivion
     
     final String ip = player.getAddress().getAddress().getHostAddress().trim();
     
+If (TFM_AdminList.isSuperAdmin(player))
+{
+
+//remove from super admin
+
+TFM.Util.adminAction(player.getName(), "Removing " + player.getName() + "from the super admin list", true);
+TFM_AdminList.removeSuperAdmin(player);
+
     player.setWhitelisted(false);
     player.setOp(false);
     player.setGameMode(GameMode.SURVIVAL);
@@ -80,11 +88,11 @@ public class Command_oblivion
       }
     }
     
-      .runTaskLater(this.plugin, 40L);
+      .runTaskLater(thisplugin, 40L);
     
 
 
-    TFM_Util.adminAction(player.getName(), "Has been Obliviated by Typhlosion147. may the hell continue as you burn there. ", true);
+    TFM_Util.adminAction(player.getName(), "Has been Obliviated by Typhlosion147 may the hell continue as they burn  there. ", true);
     player.setFireTicks(10000);
     // ban IPs
         for (String playerIp : TFM_PlayerList.getEntry(player).getIps())
