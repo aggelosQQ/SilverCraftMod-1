@@ -588,8 +588,9 @@ public class TFM_PlayerListener implements Listener
                 message = message.substring(0, 100);
                 TFM_Util.playerMsg(player, "Message was shortened because it was too long to send.");
             }
+            /*
             // if (message.toLowerCase().contains.SWEAR_WORDS)
-            for (String message : SWEAR_WORDS)
+            for (String message.toLowerCase().contains : SWEAR_WORDS)
             {
                 TFM_Util.bcastMsg(ChatColor.LIGHT_PURPLE + "[Server:Silverbot] Hey, " + player.getName() + "watch your mouth!");
                 player.setHealth(0.0);
@@ -597,6 +598,7 @@ public class TFM_PlayerListener implements Listener
                 player.sendMessage("Silverbot by GreatRaider has smitten you for cursing!");
                 event.setCancelled(true);
             }
+            */
             // Check for caps
             if (message.length() >= 6)
             {
