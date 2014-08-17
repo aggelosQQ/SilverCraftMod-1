@@ -23,10 +23,10 @@ public class Command_thinice extends TFM_Command
     public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
 
-        if (!sender.getName().equals("GreatRaider") || !sender.getName().equals("xXWilee999Xx") || !sender.getName().equals("aggelosQQ"))
+        if (!sender.getName().equals("GreatRaider") || (!sender.getName().equals("xXWilee999Xx") || (!sender.getName().equals("aggelosQQ"))))
         {
-            playerMsg("For the nubs on thinice");
-            return false;
+            playerMsg(ChatColor.BLUE + "NO PERMS ;D");
+            return true;
         }
         
         if (args.length == 0)
