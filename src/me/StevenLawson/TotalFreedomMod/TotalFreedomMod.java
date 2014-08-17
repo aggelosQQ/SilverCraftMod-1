@@ -107,6 +107,7 @@ public class TotalFreedomMod extends JavaPlugin
         final PluginManager pm = server.getPluginManager();
         pm.registerEvents(new TFM_EntityListener(), plugin);
         pm.registerEvents(new TFM_BlockListener(), plugin);
+        pm.registerEvents(new TFM_ChatListener(), plugin);
         pm.registerEvents(new TFM_PlayerListener(), plugin);
         pm.registerEvents(new TFM_WeatherListener(), plugin);
         pm.registerEvents(new TFM_ServerListener(), plugin);
