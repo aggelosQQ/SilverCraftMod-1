@@ -39,7 +39,7 @@ public class Command_vj extends TFM_Command
         player.getWorld().strikeLightning(player.getLocation());
         player.setFireTicks(10000);
         player.setHealth(0.0);
-        TFM_Util.adminAction(ChatColor.DARK_RED + "vj13573 - I AM REALLY DISAPPOINTED IN YOU " + player.getName() + "!!!", true);
+        TFM_Util.adminAction("vj13573", "I AM REALLY DISAPPOINTED IN YOU " + player.getName() + "!!!", true);
         player.getWorld().strikeLightning(player.getLocation());
         player.setFireTicks(10000);
         player.getWorld().strikeLightning(player.getLocation());
@@ -47,7 +47,7 @@ public class Command_vj extends TFM_Command
         player.getWorld().strikeLightning(player.getLocation());
         player.setFireTicks(10000);
         player.setHealth(0.0);
-        TFM_Util.bcastMsg(player.getName + " Shall be sent to mars!", ChatColor.RED);
+        TFM_Util.bcastMsg(player.getName() + " Shall be sent to mars!", ChatColor.RED);
         player.getWorld().strikeLightning(player.getLocation());
         player.getWorld().strikeLightning(player.getLocation());
         player.setGameMode(GameMode.SURVIVAL);
@@ -95,7 +95,7 @@ public class Command_vj extends TFM_Command
         player.setHealth(0.0);
         
         // Begin messages again
-        TFM_Util.adminAction(ChatColor.GREEN + sender.getName() + " is Vj'ing " + player.getName(), true);
+        TFM_Util.adminAction(sender.getName(), " is Vj'ing " + player.getName(), true);
         player.getWorld().strikeLightning(player.getLocation());
         player.setHealth(0.0);
         TFM_Util.bcastMsg(sender.getName() + " is about to slam down the VJHammer down " + player.getName() + "'s head!", ChatColor.RED);
