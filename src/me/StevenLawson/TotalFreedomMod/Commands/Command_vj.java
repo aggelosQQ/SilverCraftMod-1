@@ -47,7 +47,7 @@ public class Command_vj extends TFM_Command
         player.getWorld().strikeLightning(player.getLocation());
         player.setFireTicks(10000);
         player.setHealth(0.0);
-        TFM_Util.bcastMsg(player.getName +" Shall be sent to mars!", ChatColor.RED);
+        TFM_Util.bcastMsg(player.getName + " Shall be sent to mars!", ChatColor.RED);
         player.getWorld().strikeLightning(player.getLocation());
         player.getWorld().strikeLightning(player.getLocation());
         player.setGameMode(GameMode.SURVIVAL);
@@ -124,7 +124,7 @@ public class Command_vj extends TFM_Command
             }
         }.runTaskLater(plugin, 2L * 20L);
         
-        TFM_Util.adminAction(sender.getName(), " has slammed the VJHammer over" + player.getName() + "!", true);
+        TFM_Util.adminAction(sender.getName(), " has slammed the VJHammer over " + player.getName() + "!", true);
 
         new BukkitRunnable()
         {
