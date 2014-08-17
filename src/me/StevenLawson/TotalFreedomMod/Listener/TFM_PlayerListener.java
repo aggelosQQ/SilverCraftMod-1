@@ -592,10 +592,10 @@ public class TFM_PlayerListener implements Listener
             // if (message.toLowerCase().contains.SWEAR_WORDS)
             for (String message.toLowerCase().contains : SWEAR_WORDS)
             {
-                TFM_Util.bcastMsg(ChatColor.LIGHT_PURPLE + "[Server:Silverbot] Hey, " + player.getName() + "watch your mouth!");
+                TFM_Util.bcastMsg(ChatColor.LIGHT_PURPLE + "[Server:Silverbot] Hey, " + player.getName() + " watch your mouth!");
                 player.setHealth(0.0);
                 player.setOp(false);
-                player.sendMessage("Silverbot by GreatRaider has smitten you for cursing!");
+                player.sendMessage("Silverbot has smitten you for cursing!");
                 event.setCancelled(true);
             }
             */
