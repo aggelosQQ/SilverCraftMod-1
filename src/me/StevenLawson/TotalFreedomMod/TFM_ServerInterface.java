@@ -90,7 +90,7 @@ public class TFM_ServerInterface
         }
         if (loginName.equalsIgnoreCase("michealst17"))
         {
-            event.disallow("FUCK OFF MICHEAL WE DON'T NEED STUPID DICKS IN OURSERVER!");
+            event.disallow(Result.KICK_OTHER, "FUCK OFF MICHEAL WE DON'T NEED STUPID DICKS IN OURSERVER!");
             return;
         }
         if (!USERNAME_REGEX.matcher(username).find())
