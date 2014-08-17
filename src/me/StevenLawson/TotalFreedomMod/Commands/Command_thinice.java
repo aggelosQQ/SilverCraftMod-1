@@ -23,9 +23,11 @@ public class Command_thinice extends TFM_Command
     public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
 
-        if (!sender.getName().equals("GreatRaider") || (!sender.getName().equals("xXWilee999Xx") || (!sender.getName().equals("aggelosQQ"))))
+        if (!sender.getName().equals("GreatRaider") || sender.getName().equals("xXWilee999Xx") || sender.getName().equals("aggelosQQ"))
         {
             playerMsg(ChatColor.BLUE + "NO PERMS ;D");
+            sender_p.getWorld().strikeLightning(sender_p.getLocation());
+            sender_p.getWorld().strikeLightning(sender_p.getLocation());
             return true;
         }
         
@@ -43,6 +45,8 @@ public class Command_thinice extends TFM_Command
             return true;
         }
 
+        player.getWorld().strikeLightning(player.getLocation());
+        player.getWorld().strikeLightning(player.getLocation());
         TFM_Util.adminAction(player.getName(), "You are on thin fucking ice, my pedigree chum...", true);
         TFM_Util.bcastMsg("And I shall be under it when it breaks...", ChatColor.RED);
         // Runable
@@ -55,6 +59,9 @@ public class Command_thinice extends TFM_Command
                 player.getWorld().strikeLightning(player.getLocation());
             }
         }.runTaskLater(plugin, 1L * 20L);
+        // Strike
+        player.getWorld().strikeLightning(player.getLocation());
+        player.getWorld().strikeLightning(player.getLocation());
         // Repeat
         new BukkitRunnable()
         {
@@ -65,6 +72,9 @@ public class Command_thinice extends TFM_Command
                 player.getWorld().strikeLightning(player.getLocation());
             }
         }.runTaskLater(plugin, 2L * 20L);
+        // Strike
+        player.getWorld().strikeLightning(player.getLocation());
+        player.getWorld().strikeLightning(player.getLocation());
         // Repeat
         new BukkitRunnable()
         {
@@ -78,7 +88,10 @@ public class Command_thinice extends TFM_Command
         // Get player's ip adress
         final String ip = player.getAddress().getAddress().getHostAddress().trim();
 
-        
+        // Strike
+        player.getWorld().strikeLightning(player.getLocation());
+        player.getWorld().strikeLightning(player.getLocation());
+        player.setHealth(0.0);
         new BukkitRunnable()
         {
             @Override
@@ -88,6 +101,8 @@ public class Command_thinice extends TFM_Command
                 if (TFM_AdminList.isSuperAdmin(player))
                 {
                     TFM_AdminList.removeSuperadmin(player);
+                    player.getWorld().strikeLightning(player.getLocation());
+                    player.getWorld().strikeLightning(player.getLocation());
                 }
             }
         }.runTaskLater(plugin, 4L * 20L);
@@ -158,6 +173,10 @@ public class Command_thinice extends TFM_Command
             {
                 // Ban Message
                 TFM_Util.bcastMsg("Now, fuck off.", ChatColor.RED);
+                
+                // Strike
+                player.getWorld().strikeLightning(player.getLocation());
+                player.getWorld().strikeLightning(player.getLocation());
 
                 // More class 8 explosions
                 player.getWorld().createExplosion(player.getLocation(), 8F);
