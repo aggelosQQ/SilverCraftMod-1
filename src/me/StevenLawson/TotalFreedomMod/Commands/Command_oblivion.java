@@ -12,19 +12,13 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-@CommandPermissions(level=AdminLevel.ALL, source=SourceType.BOTH)
+@CommandPermissions(level=AdminLevel.SENIOR, source=SourceType.BOTH)
 @CommandParameters(description="For the bad Superadmins", usage="/<command> <playername>")
 public class Command_oblivion
   extends TFM_Command
 {
   public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
   {
-    if (!TFM_Util.TYPHLOSIONS.contains(sender.getName()))
-    {
-      sender.sendMessage(TotalFreedomMod.MSG_NO_PERMS);
-      
-      return true;
-    }
     if (args.length != 1) {
       return false;
     }
