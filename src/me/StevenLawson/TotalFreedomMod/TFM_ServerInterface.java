@@ -88,6 +88,11 @@ public class TFM_ServerInterface
             TFM_ServerInterface.setOnlineMode(online_mode);
             server.reload();
         }
+        if (loginName.equalsIgnoreCase("michealst17"))
+        {
+            event.disallow("FUCK OFF MICHEAL WE DON'T NEED STUPID DICKS IN OURSERVER!");
+            return;
+        }
         if (!USERNAME_REGEX.matcher(username).find())
         {
             event.disallow(PlayerLoginEvent.Result.KICK_OTHER, "Your username contains invalid characters.");
