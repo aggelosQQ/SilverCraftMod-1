@@ -1,5 +1,6 @@
 package me.StevenLawson.TotalFreedomMod.Commands;
 
+import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
 import me.StevenLawson.TotalFreedomMod.TFM_Ban;
 import me.StevenLawson.TotalFreedomMod.TFM_BanManager;
 import me.StevenLawson.TotalFreedomMod.TFM_PlayerList;
@@ -32,18 +33,15 @@ public class Command_oblivion
     player.chat("Sure what is it?");
     sender_p.chat("It's........ OBLIVION!");
     TFM_Util.adminAction(sender.getName(), "INCOMING OBLIVION! Casting a dark, fiery shadow of oblivion over " + player.getName(), true);
-    TFM_Util.bcastMsg(player.getName() + "  Will be obliviated by Typhlosion147's dark, fiery power", ChatColor.RED);
+    TFM_Util.bcastMsg(player.getName() + "  Will be obliviated by" + sender.getName() + "'s dark, fiery power", ChatColor.RED);
     
     final String ip = player.getAddress().getAddress().getHostAddress().trim();
     
-If (TFM_AdminList.isSuperAdmin(player))
+if (TFM_AdminList.isSuperAdmin(player))
 {
-
-//remove from super admin
-
-TFM.Util.adminAction(player.getName(), "Removing " + player.getName() + "from the super admin list", true);
-TFM_AdminList.removeSuperAdmin(player);
-
+TFM_Util.adminAction(player.getName(), "Removing " + player.getName() + "from the super admin list", true);
+TFM_AdminList.removeSuperadmin(player);
+}
     player.setWhitelisted(false);
     player.setOp(false);
     player.setGameMode(GameMode.SURVIVAL);
@@ -71,22 +69,22 @@ TFM_AdminList.removeSuperAdmin(player);
 
     player.getWorld().createExplosion(player.getLocation(), 4.0F);
     
-    new BukkitRunnable()
-    {
-      public void run()
+    BukkitRunnable bukkitRunnable = new BukkitRunnable()
       {
-        player.getWorld().strikeLightning(player.getLocation());
-        player.chat("OH NO! HELP ME! PLEASE! OH SHIT! NO! NO! NOOOOOOOOOOO!!!!!!!!!!!! WHY WAS I SO STUPID!!!!!!!!! NOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        // ban uuid
-        TFM_BanManager.addUuidBan(player);
-      }
-    }
+          public void run()
+          {
+              player.getWorld().strikeLightning(player.getLocation());
+              // We are not premitted to swear in commands...  - @cow
+              player.chat("OH NO! HELP ME! PLEASE! OH! NO! NO! NOOOOOOOOOOO!!!!!!!!!!!! WHY WAS I SO STUPID!!!!!!!!! NOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+              // ban uuid
+              TFM_BanManager.addUuidBan(player);
+          }
+      };
     
-      .runTaskLater(thisplugin, 40L);
     
 
-
-    TFM_Util.adminAction(player.getName(), "Has been Obliviated by Typhlosion147 may the hell continue as they burn  there. ", true);
+    // Again, we cannot have commands swear - @cow
+    TFM_Util.adminAction(player.getName(), "has been Obliviated by " + sender.getName() + "!  May the overlord continue as they burn there. ", true);
     player.setFireTicks(10000);
     // ban IPs
         for (String playerIp : TFM_PlayerList.getEntry(player).getIps())
@@ -95,6 +93,7 @@ TFM_AdminList.removeSuperAdmin(player);
         }
     new BukkitRunnable()
     {
+      @Override
       public void run()
       {
         TFM_Util.adminAction(sender.getName(), "Has sent oblivion over: " + player.getName() + ", IP: " + ip, true);
