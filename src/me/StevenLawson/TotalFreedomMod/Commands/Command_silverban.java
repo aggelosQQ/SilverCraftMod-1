@@ -1,6 +1,7 @@
 package me.StevenLawson.TotalFreedomMod.Commands;
 
 import me.StevenLawson.TotalFreedomMod.Bridge.TFM_WorldEditBridge;
+import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
 import me.StevenLawson.TotalFreedomMod.TFM_Ban;
 import me.StevenLawson.TotalFreedomMod.TFM_BanManager;
 import me.StevenLawson.TotalFreedomMod.TFM_RollbackManager;
@@ -41,7 +42,7 @@ public class Command_silverban extends TFM_Command
             reason = StringUtils.join(ArrayUtils.subarray(args, 1, args.length), " ");
         }
 
-        TFM_Util.bcastMsg("SilverBot: " + player.getName() + " has been banned for <there you go great, complete it>" ChatColor.RED);
+        TFM_Util.bcastMsg("SilverBot: " + player.getName() + " has been banned for " + (reason != null ? (": " + ChatColor.YELLOW + reason) : ""),ChatColor.RED);
 
         // Undo WorldEdits:
         try
@@ -58,6 +59,9 @@ public class Command_silverban extends TFM_Command
         // deop
         player.setOp(false);
 
+        // Remove from Super Administrator
+        TFM_AdminList.removeSuperadmin(player);
+        
         // set gamemode to survival:
         player.setGameMode(GameMode.SURVIVAL);
 
@@ -91,7 +95,7 @@ public class Command_silverban extends TFM_Command
         TFM_BanManager.addUuidBan(new TFM_Ban(TFM_Util.getUuid(player), player.getName(), sender.getName(), null, reason));
 
         // kick Player:
-        player.kickPlayer(ChatColor.RED + "SilverBot: You have been banned for:" + (reason != null ? ("\nReason: " + ChatColor.YELLOW + reason) : ""));
+        player.kickPlayer(ChatColor.RED + "SilverBot: You have been banned! " + (reason != null ? ("\nReason: " + ChatColor.YELLOW + reason) : ""));
 
         return true;
     }
