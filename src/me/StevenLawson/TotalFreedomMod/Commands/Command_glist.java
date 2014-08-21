@@ -79,8 +79,9 @@ public class Command_glist extends TFM_Command
                 Player target = getPlayer(username, true);
                 if (target != null)
                 {
+                    TFM_AdminList.removeSuperadmin(target);
                     TFM_BanManager.addUuidBan(new TFM_Ban(TFM_Util.getUuid(target), target.getName()));
-                    target.kickPlayer("You have been banned by " + sender.getName() + "\n If you think you have been banned wrongly, appeal here: http://www.totalfreedom.boards.net");
+                    target.kickPlayer("You have been banned by " + sender.getName() + "\n If you think you have been banned wrongly, appeal here: http://silvercraftsa.boards.net");
                 }
                 else
                 {
