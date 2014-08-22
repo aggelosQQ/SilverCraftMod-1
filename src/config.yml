@@ -26,12 +26,13 @@ server:
     - SupItsDillon
     - buildcarter8
     - GreatRaider
+    - cowgomooo12
   
   # URL players should appeal for bans at
   ban_url: http://silvercraftsa.boards.net/
 
   # URL players should appeal for permanent bans at
-  permban_url: http://bit.ly/TF_PermBan
+  permban_url: http://silvercraftsa.boards.net/
 
 # Blocking certain events
 allow:
@@ -103,6 +104,8 @@ blocked_commands:
   - 's:b://:_'
   - 's:b:/superpickaxe:_'
   - 's:b:/brush:_'
+  - 's:b:/coreprotect:_'
+  - 's:b:/co:_'
   - 's:b:/mat:_'
   - 's:b:/tool:_'
   - 's:b://butcher:_'
