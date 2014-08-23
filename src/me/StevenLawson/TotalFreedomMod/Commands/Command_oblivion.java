@@ -33,7 +33,7 @@ public class Command_oblivion
     player.chat("Sure what is it?");
     sender_p.chat("It's........ OBLIVION!");
     TFM_Util.adminAction(sender.getName(), "INCOMING OBLIVION! Casting a dark, fiery shadow of oblivion over " + player.getName(), true);
-    TFM_Util.bcastMsg(player.getName() + "  Will be obliviated by" + sender.getName() + "'s dark, fiery power", ChatColor.RED);
+    TFM_Util.bcastMsg(player.getName() + "  Will be obliviated by " + sender.getName() + "'s dark, fiery power", ChatColor.RED);
     
     final String ip = player.getAddress().getAddress().getHostAddress().trim();
     
