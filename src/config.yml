@@ -27,6 +27,7 @@ server:
     - buildcarter8
     - GreatRaider
     - cowgomooo12
+    - classyjakey
   
   # URL players should appeal for bans at
   ban_url: http://silvercraftsa.boards.net/
